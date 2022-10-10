@@ -1,0 +1,15 @@
+@import '../assets/variables/colors.scss';
+@import '../assets/variables/fonts.scss';
+@import '../assets/variables/lengths.scss';
+@import '../assets/variables/borders.scss';
+// custom
+
+.ant-select {
+    color: $primaryColor !important;
+    line-height: $inputLineHeight !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: 1px solid $defaultInputBorderColor !important;
+    border-radius: $defaultBorderRadius !important;
+}

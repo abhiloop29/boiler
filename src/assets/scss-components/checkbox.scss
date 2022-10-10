@@ -1,0 +1,20 @@
+@import '../variables/borders.scss';
+@import '../variables/colors.scss';
+@import '../variables/length.scss';
+@import '../variables/font.scss';
+
+.ant-checkbox-checked::after {
+    border: 1px solid $primaryColor !important;
+    border-radius: $defaultBorderRadius !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primaryColor !important;
+    border-color: $primaryColor !important;
+}
+
+
+.ant-checkbox-inner {
+    border: 1px solid $defaultBorderColor !important;
+    border-radius: $defaultBorderRadius !important;
+}

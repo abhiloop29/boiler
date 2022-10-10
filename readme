@@ -1,0 +1,4 @@
+> npx create-react-app [project name]
+> get into project
+> run npm i antd
+> run npm i node-sass
