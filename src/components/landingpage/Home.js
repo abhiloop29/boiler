@@ -3,9 +3,7 @@ import React from "react";
 import { emailRegex } from "../../utils/Constants";
 import FormBase from "../ui-components/Form";
 import { Loader } from "../utilities/Loader";
-import "../../assets/scss-components/radio.scss";
-import "../../assets/scss-components/checkbox.scss";
-import "../../assets/scss-components/input.scss";
+
 import { galaxy } from "../../utils/ImagePath";
 import {
   MainButton,

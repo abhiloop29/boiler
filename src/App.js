@@ -6,6 +6,7 @@ import Home from "./components/landingpage/Home";
 import "../src/assets/bootstrap.css";
 import "../src/assets/global.scss";
 import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
 
 const App = () => {
   // const { state } = useAuthContext();
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
       </Routes>
     </>
   );

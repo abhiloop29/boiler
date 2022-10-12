@@ -2,7 +2,10 @@ import React from 'react';
 import { LockOutlined, UserOutlined, EyeTwoTone, EyeInvisibleOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import "./auth.scss";
-import { HeadingText2, NormalText } from '../ui-components/Text';
+import { HeadingText2, NormalText, SpanText } from '../ui-components/Text';
+import { MainButton, SecondaryButton } from '../ui-components/Button';
+import { RiGoogleFill, RiFacebookFill, RiAppleFill } from 'react-icons/ri';
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const onFinish = (values) => {
@@ -20,7 +23,7 @@ const Login = () => {
                         }}
                         onFinish={onFinish}
                     >
-                        <HeadingText2 children="Agent Login" className="mb-2 text-center" />
+                        <HeadingText2 children="Sign In" className="mb-2 text-center" />
                         <NormalText children="Hey, Enter your details to get sign in to your account" className="mb-4 text-center" />
                         <Form.Item
                             name="username"
@@ -52,7 +55,7 @@ const Login = () => {
                             />
                         </Form.Item>
                         <Form.Item>
-                            <Form.Item name="remember" valuePropName="checked" noStyle className='mb-2'>
+                            <Form.Item name="remember" noStyle className='mb-2'>
                                 <Checkbox>Remember me</Checkbox>
                             </Form.Item>
 
@@ -62,11 +65,22 @@ const Login = () => {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button type="primary" htmlType="submit" className="login-form-button">
+                            <MainButton children="Sign In" htmlType="submit" className="w-100" />
+                            {/* <Button type="primary" htmlType="submit" className="login-form-button">
                                 Log in
-                            </Button>
-                            Or <a href="">register now!</a>
+                            </Button> */}
                         </Form.Item>
+                        <div className='social text-center'>
+                            <SpanText className="sign_with">Or Sign In With</SpanText>
+                            <div className='social-btn mt-3'>
+                                <SecondaryButton children={<><RiGoogleFill className="me-1" />Google</>} style={{ padding: "4px 8px" }} />
+                                <SecondaryButton children={<><RiFacebookFill className="me-1" />Facebook</>} style={{ padding: "4px 8px" }} />
+                                <SecondaryButton children={<><RiAppleFill className="me-1" />Apple</>} style={{ padding: "4px 8px" }} />
+                            </div>
+                            <div className="mt-3">
+                                <SpanText children={<>Don't have an account?<Link to="" className='ms-1 ' style={{ color: "cadetblue" }}>Register now</Link></>} />
+                            </div>
+                        </div>
                     </Form>
                 </div>
             </section>
