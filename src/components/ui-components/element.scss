@@ -1,5 +1,6 @@
 @import '../../assets/variables/colors.scss';
 @import '../../assets/variables/borders.scss';
+@import '../../assets/variables/font.scss';
 
 
 @mixin main_btn_effect_2 {
@@ -77,15 +78,18 @@
 // text-scss
 .heading_text_1 {
     color: $heading !important;
+    font-family: $font1;
 }
 
 .heading_text_2 {
     color: $heading !important;
+    font-family: $font1;
 }
 
 .normal_text {
     font-size: 16px;
     color: $paragraph !important;
+    font-family: $font2;
 }
 
 .small_text {

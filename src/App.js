@@ -5,6 +5,7 @@ import Home from "./components/landingpage/Home";
 // import useAuthContext from "./utils/AuthContext";
 import "../src/assets/bootstrap.css";
 import "../src/assets/global.scss";
+import Login from "./components/auth/Login";
 
 const App = () => {
   // const { state } = useAuthContext();
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
