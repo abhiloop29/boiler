@@ -125,7 +125,7 @@ textarea.ant-input {
 .ant-input-group-addon {
     background-color: $defaultBackground;
     border: 1px solid $defaultBorderColor !important;
-    border-radius: $defaultBorderRadius !important;
+    // border-radius: $defaultBorderRadius !important;
 }
 
 .ant-input-search .ant-input:hover,
@@ -180,15 +180,19 @@ textarea.ant-input {
 
 //   custom
 .ant-input {
-    color: $primaryColor !important;
+    color: $commonText !important;
     line-height: $inputLineHeight !important;
     background-color: $defaultBackground !important;
     border-radius: $defaultBorderRadius !important;
 }
 
+.custom-input {
+    @extend .ant-input-affix-wrapper;
+}
+
 ::placeholder {
 
-    color: $commonText !important;
+    color: #999 !important;
     opacity: 1;
     font-family: $font1;
 }

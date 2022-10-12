@@ -33,7 +33,8 @@
 
 .btn_size {
     padding: 5px 15px;
-    height: auto;
+    height: auto !important;
+    font-size: 18px !important;
 }
 
 .main-btn {
@@ -75,28 +76,38 @@
     }
 }
 
-// text-scss
-.heading_text_1 {
+.commontext {
     color: $commonText !important;
     font-family: $font1;
+    position: relative !important;
+}
+
+// text-scss
+.heading_text_1 {
+    @extend .commontext;
 }
 
 .heading_text_2 {
-    color: $commonText !important;
-    font-family: $font1;
+    @extend .commontext;
 }
 
 .normal_text {
     font-size: 16px;
     color: $commonText !important;
     font-family: $font2;
+    position: relative !important;
+
 }
 
 .small_text {
     font-size: 15px;
     color: $commonText !important;
+    position: relative !important;
+
 }
 
 .span_text {
     color: $commonText !important;
+    position: relative !important;
+
 }
