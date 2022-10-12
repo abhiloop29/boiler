@@ -38,7 +38,7 @@ Folder structure:
         |--scss-component <!-- ants component's css is here component wise -->
             |--
         |--variables
-            |--
+            |-- <!-- if you want to change the color, font, border-color -->
         bootstrap.css
         global.scss
     |--Components
