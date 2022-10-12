@@ -77,26 +77,26 @@
 
 // text-scss
 .heading_text_1 {
-    color: $heading !important;
+    color: $commonText !important;
     font-family: $font1;
 }
 
 .heading_text_2 {
-    color: $heading !important;
+    color: $commonText !important;
     font-family: $font1;
 }
 
 .normal_text {
     font-size: 16px;
-    color: $paragraph !important;
+    color: $commonText !important;
     font-family: $font2;
 }
 
 .small_text {
     font-size: 15px;
-    color: $paragraph !important;
+    color: $commonText !important;
 }
 
 .span_text {
-    color: $paragraph !important;
+    color: $commonText !important;
 }

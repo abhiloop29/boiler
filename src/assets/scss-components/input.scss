@@ -39,6 +39,7 @@
 .ant-input-affix-wrapper:focus,
 .ant-input-affix-wrapper-focused {
     border-color: $primaryColor !important;
+    color: $primaryColor !important;
 }
 
 
@@ -186,9 +187,18 @@ textarea.ant-input {
 }
 
 ::placeholder {
-    color: #000014 !important;
+
+    color: $commonText !important;
     opacity: 1;
     font-family: $font1;
-    // font-weight: 300;
-    /* Firefox */
+}
+
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+    border-color: #ff4d4f !important;
+}
+
+.ant-input-affix-wrapper>input.ant-input {
+    position: relative;
+    top: 3px;
 }
