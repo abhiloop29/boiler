@@ -5,7 +5,7 @@
 
 .ant-checkbox-checked::after {
     border: 1px solid $primaryColor !important;
-    border-radius: $defaultBorderRadius !important;
+    border-radius: $secondBorderRadius !important;
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {
@@ -16,5 +16,5 @@
 
 .ant-checkbox-inner {
     border: 1px solid $defaultBorderColor !important;
-    border-radius: $defaultBorderRadius !important;
+    border-radius: $secondBorderRadius !important;
 }
