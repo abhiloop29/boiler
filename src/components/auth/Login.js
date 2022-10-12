@@ -1,6 +1,8 @@
 import React from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
+import "./auth.scss";
+import { HeadingText1, HeadingText2, NormalText } from '../ui-components/Text';
 
 const Login = () => {
     const onFinish = (values) => {
@@ -9,15 +11,17 @@ const Login = () => {
     return (
         <>
             <section className='login'>
-                <div className='login-form'>
+                <div className='login-form text-center'>
                     <Form
                         name="normal_login"
-                        className="login-form"
+                        className=""
                         initialValues={{
                             remember: true,
                         }}
                         onFinish={onFinish}
                     >
+                        <HeadingText2 children="Agent Login" className="mb-2" />
+                        <NormalText children="Hey, Enter your details to get sign in to your account" className="mb-4" />
                         <Form.Item
                             name="username"
                             rules={[

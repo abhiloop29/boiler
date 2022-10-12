@@ -4,8 +4,11 @@
 @import '../variables/font.scss';
 
 .ant-input-affix-wrapper {
-    line-height: $inputLineHeight;
     border: 1px solid $defaultBorderColor !important;
+    padding: 8px 11px !important;
+    border-radius: $defaultBorderRadius !important;
+
+
 }
 
 .ant-input-affix-wrapper::-moz-placeholder {
@@ -176,9 +179,16 @@ textarea.ant-input {
 
 //   custom
 .ant-input {
-    color: $primaryColor;
-    line-height: $inputLineHeight;
-    background-color: $defaultBackground;
-    border: 1px solid $defaultBorderColor !important;
-    border-radius: $defaultBorderRadius;
+    color: $primaryColor !important;
+    line-height: $inputLineHeight !important;
+    background-color: $defaultBackground !important;
+    border-radius: $defaultBorderRadius !important;
+}
+
+::placeholder {
+    color: #000014 !important;
+    opacity: 1;
+    font-family: $font1;
+    // font-weight: 300;
+    /* Firefox */
 }
