@@ -4,6 +4,7 @@
 export const nameRegex = "^[A-Za-z. ]+$";
 export const emailRegex =
   "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+[.]{1}[a-zA-Z]{2,}$";
+export const textareaRegex = "^[a-zA-Z0-9]+(?: [a-zA-Z0-9]+)*$";
 export const phoneRegex = "^[6-9]{1}[0-9]{10}$";
 export const pincodeRegex = "^[1-9]{1}[0-9]{5}$";
 export const pancardRegex = "^[A-Z]{5}[0-9]{4}[A-Z]{1}$";
