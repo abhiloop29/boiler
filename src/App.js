@@ -7,6 +7,9 @@ import "../src/assets/bootstrap.css";
 import "../src/assets/global.scss";
 import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
+import ForgetPassword from "./components/auth/ForgetPassword";
+import Otp from "./components/auth/Otp";
+import CreatePassword from "./components/auth/CreatePassword";
 
 const App = () => {
   // const { state } = useAuthContext();
@@ -23,7 +26,9 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-
+        <Route path="/forget" element={<ForgetPassword />} />
+        <Route path="/otp" element={<Otp />} />
+        <Route path="/createpassword" element={<CreatePassword />} />
       </Routes>
     </>
   );

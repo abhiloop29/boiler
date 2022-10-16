@@ -20,6 +20,7 @@ const SignUp = () => {
                 style={{
                     width: 70,
                 }}
+                defaultValue="86"
 
             >
                 <Option value="86">+86</Option>
@@ -94,7 +95,7 @@ const SignUp = () => {
                         </Form.Item>
                         <Form.Item
                             name="phone"
-                            className='cuntry_code'
+                            className='cuntry_code mb-2'
                             rules={[
                                 {
                                     required: true,
@@ -107,6 +108,7 @@ const SignUp = () => {
                                 style={{
                                     width: '100%',
                                 }}
+                                placeholder="Phone No."
                             />
                         </Form.Item>
                         <Form.Item
@@ -122,7 +124,24 @@ const SignUp = () => {
                             <Input.Password
                                 prefix={<LockOutlined className="site-form-item-icon" />}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="New Password"
+                                iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                            />
+                        </Form.Item>
+                        <Form.Item
+                            name="password"
+                            className='mb-2'
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Please input your Password!',
+                                },
+                            ]}
+                        >
+                            <Input.Password
+                                prefix={<LockOutlined className="site-form-item-icon" />}
+                                type="password"
+                                placeholder="Confirm Password"
                                 iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                             />
                         </Form.Item>
@@ -130,14 +149,10 @@ const SignUp = () => {
                             <Form.Item name="remember" noStyle className='mb-2'>
                                 <Checkbox>Remember me</Checkbox>
                             </Form.Item>
-
-                            <a className="login-form-forgot" href="">
-                                Forgot password
-                            </a>
                         </Form.Item>
 
                         <Form.Item>
-                            <MainButton children="Sign In" htmlType="submit" className="w-100" />
+                            <MainButton children="Sign Up" htmlType="submit" className="w-100" />
                             {/* <Button type="primary" htmlType="submit" className="login-form-button">
                                 Log in
                             </Button> */}
@@ -150,7 +165,7 @@ const SignUp = () => {
                                 <SecondaryButton children={<><RiAppleFill className="me-1" />Apple</>} style={{ padding: "4px 8px" }} />
                             </div>
                             <div className="mt-3">
-                                <SpanText children={<>Don't have an account?<Link to="" className='ms-1 ' style={{ color: "cadetblue" }}>Register now</Link></>} />
+                                <SpanText children={<>Already account?<Link to="" className='ms-1 ' style={{ color: "cadetblue" }}>Login now</Link></>} />
                             </div>
                         </div>
                     </Form>
