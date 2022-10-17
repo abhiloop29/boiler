@@ -4,16 +4,10 @@ import { Button, Card, Form, Input, Layout } from 'antd';
 import HeaderLayout from './Header';
 import Sidebar from './Sidebar';
 import { emailRegex } from '../../utils/Constants';
+import { ModalComponent } from '../antd-component/AntdComponent';
 const { Content } = Layout;
 
-const AuthLayout = () => {
-    const onFinish = () => {
-
-    };
-
-    const onFinishFailed = () => {
-
-    };
+const AuthLayout = (props) => {
     return (
         <Layout>
             <Sidebar />
@@ -23,11 +17,10 @@ const AuthLayout = () => {
                     <Card >
                         <Form
                             name="basic"
-                            labelCol={{ span: 8 }}
-                            wrapperCol={{ span: 16 }}
+                            scrollToFirstError
                             initialValues={{ remember: true }}
-                            onFinish={onFinish}
-                            onFinishFailed={onFinishFailed}
+                            // onFinish={onFinish}
+                            // onFinishFailed={onFinishFailed}
                             autoComplete="off"
                         >
                             <Form.Item

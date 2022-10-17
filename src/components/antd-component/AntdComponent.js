@@ -1,5 +1,5 @@
-import React from 'react'
-import { Form, Input } from 'antd'
+import React, { Children, useState } from 'react'
+import { Form, Input, Modal } from 'antd'
 import { emailRegex } from '../../utils/Constants';
 
 export const InputComponent = () => {
@@ -42,9 +42,23 @@ export const InputComponent = () => {
         </div>
     )
 }
-export const ModalComponent = () => {
+export const ModalComponent = (props) => {
+    const [modalOpen, modalClose] = useState()
+    const openModal = () => { modalClose(true); }
+    const closeModal = () => { modalClose(false) }
+    const { className, children } = props;
+
     return (
-        <div>AntdComponent</div>
+        <Modal
+            title={false}
+            open={modalOpen}
+            onCancel={closeModal}
+            footer={false}
+            className={`${className} class`}
+            {...props}
+        >
+            {children}
+        </Modal>
     )
 }
 export const SelectComponent = () => {
