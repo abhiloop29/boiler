@@ -1,7 +1,8 @@
 import React from "react";
 import { Form } from "antd";
+import PropTypes from "prop-types";
 
-const FormBase = (props) => {
+export const FormBase = (props) => {
   const { className } = props;
   const layoutChange = "vertical";
   return (
@@ -16,5 +17,6 @@ const FormBase = (props) => {
     </>
   );
 };
-
-export default FormBase;
+FormBase.propTypes = {
+  className: PropTypes.string
+};
